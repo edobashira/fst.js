@@ -1,0 +1,519 @@
+diff -rauB openfst-1.3.2/src/include/fst/accumulator.h openfst-src/src/include/fst/accumulator.h
+--- openfst-1.3.2/src/include/fst/accumulator.h	2012-06-14 23:03:22.000000000 +0900
++++ openfst-src/src/include/fst/accumulator.h	2012-10-12 20:41:55.308324002 +0900
+@@ -23,9 +23,9 @@
+ 
+ #include <algorithm>
+ #include <functional>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <vector>
+ using std::vector;
+ 
+diff -rauB openfst-1.3.2/src/include/fst/arc-map.h openfst-src/src/include/fst/arc-map.h
+--- openfst-1.3.2/src/include/fst/arc-map.h	2012-06-14 23:03:22.000000000 +0900
++++ openfst-src/src/include/fst/arc-map.h	2012-10-12 20:41:55.318324020 +0900
+@@ -23,9 +23,9 @@
+ #ifndef FST_LIB_ARC_MAP_H__
+ #define FST_LIB_ARC_MAP_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <string>
+ #include <utility>
+ using std::pair; using std::make_pair;
+diff -rauB openfst-1.3.2/src/include/fst/config.h openfst-src/src/include/fst/config.h
+--- openfst-1.3.2/src/include/fst/config.h	2012-06-14 23:03:41.000000000 +0900
++++ openfst-src/src/include/fst/config.h	2012-10-13 15:14:36.978324228 +0900
+@@ -4,9 +4,9 @@
+ /* Define to 1 if you have the ICU library. */
+ /* #undef HAVE_ICU */
+ 
+-/* Define to 1 if the system has the type `std::tr1::hash<long long
++/* Define to 1 if the system has the type `std::hash<long long
+    unsigned>'. */
+ #define HAVE_STD__TR1__HASH_LONG_LONG_UNSIGNED_ 1
+ 
+ /* Define to 1 if the system has the type `__gnu_cxx::slist<int>'. */
+-#define HAVE___GNU_CXX__SLIST_INT_ 1
++//#define HAVE___GNU_CXX__SLIST_INT_ 1
+diff -rauB openfst-1.3.2/src/include/fst/determinize.h openfst-src/src/include/fst/determinize.h
+--- openfst-1.3.2/src/include/fst/determinize.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/determinize.h	2012-10-12 20:41:55.298324201 +0900
+@@ -24,9 +24,9 @@
+ 
+ #include <algorithm>
+ #include <climits>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <map>
+ #include <fst/slist.h>
+ #include <string>
+diff -rauB openfst-1.3.2/src/include/fst/encode.h openfst-src/src/include/fst/encode.h
+--- openfst-1.3.2/src/include/fst/encode.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/encode.h	2012-10-12 20:41:55.257965480 +0900
+@@ -22,9 +22,9 @@
+ #define FST_LIB_ENCODE_H__
+ 
+ #include <climits>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <string>
+ #include <vector>
+ using std::vector;
+diff -rauB openfst-1.3.2/src/include/fst/epsnormalize.h openfst-src/src/include/fst/epsnormalize.h
+--- openfst-1.3.2/src/include/fst/epsnormalize.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/epsnormalize.h	2012-10-12 20:41:55.268326177 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_LIB_EPSNORMALIZE_H__
+ #define FST_LIB_EPSNORMALIZE_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <fst/slist.h>
+ 
+ 
+diff -rauB openfst-1.3.2/src/include/fst/equivalent.h openfst-src/src/include/fst/equivalent.h
+--- openfst-1.3.2/src/include/fst/equivalent.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/equivalent.h	2012-10-12 20:41:55.359572955 +0900
+@@ -23,9 +23,9 @@
+ 
+ #include <algorithm>
+ #include <deque>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <utility>
+ using std::pair; using std::make_pair;
+ #include <vector>
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/collection.h openfst-src/src/include/fst/extensions/pdt/collection.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/collection.h	2012-06-14 23:03:26.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/collection.h	2012-10-12 20:41:55.348324051 +0900
+@@ -105,7 +105,7 @@
+  private:
+   static const I kNoNodeId;
+   static const size_t kPrime;
+-  static std::tr1::hash<T> hash_;
++  static std::hash<T> hash_;
+ 
+   NodeTable node_table_;
+ 
+@@ -116,7 +116,7 @@
+ 
+ template <class I, class T> const size_t Collection<I, T>::kPrime = 7853;
+ 
+-template <class I, class T> std::tr1::hash<T> Collection<I, T>::hash_;
++template <class I, class T> std::hash<T> Collection<I, T>::hash_;
+ 
+ }  // namespace fst
+ 
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/info.h openfst-src/src/include/fst/extensions/pdt/info.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/info.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/info.h	2012-10-12 20:41:55.348324051 +0900
+@@ -21,12 +21,12 @@
+ #ifndef FST_EXTENSIONS_PDT_INFO_H__
+ #define FST_EXTENSIONS_PDT_INFO_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <vector>
+ using std::vector;
+ 
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/paren.h openfst-src/src/include/fst/extensions/pdt/paren.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/paren.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/paren.h	2012-10-12 20:41:55.348324051 +0900
+@@ -23,12 +23,12 @@
+ #define FST_EXTENSIONS_PDT_PAREN_H_
+ 
+ #include <algorithm>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <set>
+ 
+ #include <fst/extensions/pdt/pdt.h>
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/pdt.h openfst-src/src/include/fst/extensions/pdt/pdt.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/pdt.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/pdt.h	2012-10-12 20:41:55.348324051 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_EXTENSIONS_PDT_PDT_H__
+ #define FST_EXTENSIONS_PDT_PDT_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <map>
+ #include <set>
+ 
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/reverse.h openfst-src/src/include/fst/extensions/pdt/reverse.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/reverse.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/reverse.h	2012-10-12 20:41:55.348324051 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_EXTENSIONS_PDT_REVERSE_H__
+ #define FST_EXTENSIONS_PDT_REVERSE_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <vector>
+ using std::vector;
+ 
+diff -rauB openfst-1.3.2/src/include/fst/extensions/pdt/shortest-path.h openfst-src/src/include/fst/extensions/pdt/shortest-path.h
+--- openfst-1.3.2/src/include/fst/extensions/pdt/shortest-path.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/extensions/pdt/shortest-path.h	2012-10-12 20:41:55.348324051 +0900
+@@ -25,12 +25,12 @@
+ #include <fst/extensions/pdt/paren.h>
+ #include <fst/extensions/pdt/pdt.h>
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <stack>
+ #include <vector>
+ using std::vector;
+diff -rauB openfst-1.3.2/src/include/fst/factor-weight.h openfst-src/src/include/fst/factor-weight.h
+--- openfst-1.3.2/src/include/fst/factor-weight.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/factor-weight.h	2012-10-12 20:41:55.268326177 +0900
+@@ -22,9 +22,9 @@
+ #define FST_LIB_FACTOR_WEIGHT_H__
+ 
+ #include <algorithm>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <fst/slist.h>
+ #include <string>
+ #include <utility>
+diff -rauB openfst-1.3.2/src/include/fst/label-reachable.h openfst-src/src/include/fst/label-reachable.h
+--- openfst-1.3.2/src/include/fst/label-reachable.h	2012-06-14 23:03:23.000000000 +0900
++++ openfst-src/src/include/fst/label-reachable.h	2012-10-12 20:41:55.308324002 +0900
+@@ -23,9 +23,9 @@
+ #ifndef FST_LIB_LABEL_REACHABLE_H__
+ #define FST_LIB_LABEL_REACHABLE_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <vector>
+ using std::vector;
+ 
+diff -rauB openfst-1.3.2/src/include/fst/relabel.h openfst-src/src/include/fst/relabel.h
+--- openfst-1.3.2/src/include/fst/relabel.h	2012-06-14 23:03:24.000000000 +0900
++++ openfst-src/src/include/fst/relabel.h	2012-10-12 20:41:55.298324201 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_LIB_RELABEL_H__
+ #define FST_LIB_RELABEL_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <string>
+ #include <utility>
+ using std::pair; using std::make_pair;
+diff -rauB openfst-1.3.2/src/include/fst/replace.h openfst-src/src/include/fst/replace.h
+--- openfst-1.3.2/src/include/fst/replace.h	2012-06-14 23:03:24.000000000 +0900
++++ openfst-src/src/include/fst/replace.h	2012-10-12 20:41:55.257965480 +0900
+@@ -22,9 +22,9 @@
+ #ifndef FST_LIB_REPLACE_H__
+ #define FST_LIB_REPLACE_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <set>
+ #include <string>
+ #include <utility>
+diff -rauB openfst-1.3.2/src/include/fst/replace-util.h openfst-src/src/include/fst/replace-util.h
+--- openfst-1.3.2/src/include/fst/replace-util.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/replace-util.h	2012-10-12 20:41:55.298324201 +0900
+@@ -25,12 +25,12 @@
+ 
+ #include <vector>
+ using std::vector;
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <map>
+ 
+ #include <fst/connect.h>
+diff -rauB openfst-1.3.2/src/include/fst/rmepsilon.h openfst-src/src/include/fst/rmepsilon.h
+--- openfst-1.3.2/src/include/fst/rmepsilon.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/rmepsilon.h	2012-10-12 20:41:55.338196296 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_LIB_RMEPSILON_H__
+ #define FST_LIB_RMEPSILON_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <fst/slist.h>
+ #include <stack>
+ #include <string>
+diff -rauB openfst-1.3.2/src/include/fst/rmfinalepsilon.h openfst-src/src/include/fst/rmfinalepsilon.h
+--- openfst-1.3.2/src/include/fst/rmfinalepsilon.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/rmfinalepsilon.h	2012-10-12 20:41:55.327906566 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_LIB_RMFINALEPSILON_H__
+ #define FST_LIB_RMFINALEPSILON_H__
+ 
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <vector>
+ using std::vector;
+ 
+diff -rauB openfst-1.3.2/src/include/fst/script/compile-impl.h openfst-src/src/include/fst/script/compile-impl.h
+--- openfst-1.3.2/src/include/fst/script/compile-impl.h	2012-06-14 23:03:27.000000000 +0900
++++ openfst-src/src/include/fst/script/compile-impl.h	2012-10-12 20:41:55.338196296 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_SCRIPT_COMPILE_IMPL_H_
+ #define FST_SCRIPT_COMPILE_IMPL_H_
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <sstream>
+ #include <string>
+ #include <vector>
+diff -rauB openfst-1.3.2/src/include/fst/sparse-tuple-weight.h openfst-src/src/include/fst/sparse-tuple-weight.h
+--- openfst-1.3.2/src/include/fst/sparse-tuple-weight.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/sparse-tuple-weight.h	2012-10-12 20:41:55.298324201 +0900
+@@ -33,9 +33,9 @@
+ #include<string>
+ #include<list>
+ #include<stack>
+-#include<tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include<unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ 
+ #include <fst/weight.h>
+ 
+@@ -140,7 +140,7 @@
+   // Assumes H() function exists for the hash of the key value
+   size_t Hash() const {
+     uint64 h = 0;
+-    std::tr1::hash<K> H;
++    std::hash<K> H;
+     for (SparseTupleWeightIterator<W, K> it(*this); !it.Done(); it.Next()) {
+       h = 5 * h + H(it.Value().first);
+       h = 13 * h + it.Value().second.Hash();
+diff -rauB openfst-1.3.2/src/include/fst/state-map.h openfst-src/src/include/fst/state-map.h
+--- openfst-1.3.2/src/include/fst/state-map.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/state-map.h	2012-10-12 20:41:55.257965480 +0900
+@@ -23,9 +23,9 @@
+ #define FST_LIB_STATE_MAP_H__
+ 
+ #include <algorithm>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
+ #include <string>
+ #include <utility>
+ using std::pair; using std::make_pair;
+diff -rauB openfst-1.3.2/src/include/fst/symbol-table-ops.h openfst-src/src/include/fst/symbol-table-ops.h
+--- openfst-1.3.2/src/include/fst/symbol-table-ops.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/symbol-table-ops.h	2012-10-12 20:41:55.257965480 +0900
+@@ -20,9 +20,9 @@
+ #include <vector>
+ using std::vector;
+ #include <string>
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ 
+ 
+ #include <fst/fst.h>
+diff -rauB openfst-1.3.2/src/include/fst/synchronize.h openfst-src/src/include/fst/synchronize.h
+--- openfst-1.3.2/src/include/fst/synchronize.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/synchronize.h	2012-10-12 20:41:55.318324020 +0900
+@@ -22,12 +22,12 @@
+ #define FST_LIB_SYNCHRONIZE_H__
+ 
+ #include <algorithm>
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <string>
+ #include <utility>
+ using std::pair; using std::make_pair;
+diff -rauB openfst-1.3.2/src/include/fst/test-properties.h openfst-src/src/include/fst/test-properties.h
+--- openfst-1.3.2/src/include/fst/test-properties.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/test-properties.h	2012-10-12 20:41:55.257965480 +0900
+@@ -21,9 +21,9 @@
+ #ifndef FST_LIB_TEST_PROPERTIES_H__
+ #define FST_LIB_TEST_PROPERTIES_H__
+ 
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ 
+ #include <fst/dfs-visit.h>
+ #include <fst/connect.h>
+diff -rauB openfst-1.3.2/src/include/fst/util.h openfst-src/src/include/fst/util.h
+--- openfst-1.3.2/src/include/fst/util.h	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/include/fst/util.h	2012-10-12 20:41:55.278325126 +0900
+@@ -21,12 +21,12 @@
+ #ifndef FST_LIB_UTIL_H__
+ #define FST_LIB_UTIL_H__
+ 
+-#include <tr1/unordered_map>
+-using std::tr1::unordered_map;
+-using std::tr1::unordered_multimap;
+-#include <tr1/unordered_set>
+-using std::tr1::unordered_set;
+-using std::tr1::unordered_multiset;
++#include <unordered_map>
++using std::unordered_map;
++using std::unordered_multimap;
++#include <unordered_set>
++using std::unordered_set;
++using std::unordered_multiset;
+ #include <list>
+ #include <map>
+ #include <set>
+diff -rauB openfst-1.3.2/src/lib/fst.cc openfst-src/src/lib/fst.cc
+--- openfst-1.3.2/src/lib/fst.cc	2012-06-14 23:03:25.000000000 +0900
++++ openfst-src/src/lib/fst.cc	2012-10-13 19:01:33.247907336 +0900
+@@ -56,16 +56,17 @@
+ 
+ // Register VectorFst, ConstFst and EditFst for common arcs types
+ REGISTER_FST(VectorFst, StdArc);
+-REGISTER_FST(VectorFst, LogArc);
+-REGISTER_FST(VectorFst, Log64Arc);
+-REGISTER_FST(ConstFst, StdArc);
+-REGISTER_FST(ConstFst, LogArc);
+-REGISTER_FST(ConstFst, Log64Arc);
+-REGISTER_FST(EditFst, StdArc);
+-REGISTER_FST(EditFst, LogArc);
+-REGISTER_FST(EditFst, Log64Arc);
++//REGISTER_FST(VectorFst, LogArc);
++//REGISTER_FST(VectorFst, Log64Arc);
++//REGISTER_FST(ConstFst, StdArc);
++//REGISTER_FST(ConstFst, LogArc);
++//REGISTER_FST(ConstFst, Log64Arc);
++//REGISTER_FST(EditFst, StdArc);
++//REGISTER_FST(EditFst, LogArc);
++//REGISTER_FST(EditFst, Log64Arc);
+ 
+ // Register CompactFst for common arcs with the default (uint32) size type
++/*
+ static FstRegisterer<
+   CompactFst<StdArc, StringCompactor<StdArc> > >
+ CompactFst_StdArc_StringCompactor_registerer;
+@@ -96,7 +97,7 @@
+ static FstRegisterer<
+   CompactFst<LogArc, UnweightedAcceptorCompactor<LogArc> > >
+ CompactFst_LogArc_UnweightedAcceptorCompactor_registerer;
+-
++*/
+ // Fst type definitions for lookahead Fsts.
+ extern const char arc_lookahead_fst_type[] = "arc_lookahead";
+ extern const char ilabel_lookahead_fst_type[] = "ilabel_lookahead";
