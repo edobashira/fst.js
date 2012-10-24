@@ -15,12 +15,28 @@ StdVectorFst.prototype['AddState'] = function() {
     return _StdVectorFst_AddState(this.ptr);
 }
 
-StdVectorFst.prototype['Final'] = function(arg0) {
-    return _StdVectorFst_Final (this.ptr, arg0);
+StdVectorFst.prototype['AddArc'] = function(state, ilabel, olabel, weight, nextstate) {
+    return _StdVectorFst_AddArc(this.ptr, ilabel, olabel, weight, nextstate);
+}
+
+StdVectorFst.prototype['SetFinal'] = function(state, weight) {
+    return _StdVectorFst_SetFinal (this.ptr, state, weight);
+}
+
+StdVectorFst.prototype['Final'] = function(state) {
+    return _StdVectorFst_Final (this.ptr, state);
 }
 
 StdVectorFst.prototype['NumStates'] = function() {
     return _StdVectorFst_NumStates(this.ptr);
 }
 
+
+StdVectorFst.prototype['Start'] = function() {
+    return _StdVectorFst_Start (this.ptr);
+}
+
+StdVectorFst.prototype['SetStart'] = function(state) {
+    return _StdVectorFst_SetStart (this.ptr, state);
+}
 
